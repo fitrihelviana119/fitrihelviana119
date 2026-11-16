@@ -1,184 +1,29 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biodata Online | Nama Kamu</title>
-  <meta name="description" content="Biodata online pribadi dengan Bukti Belajar: Scientific Calculator JavaScript.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Perkalian 9</title>
 </head>
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <header class="nav">
-    <div class="container nav-inner">
-      <a href="#beranda" class="logo">&lt;<span>NamaKamu</span>/&gt;</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav-links" id="navLinks">
-        <a href="#beranda">Beranda</a>
-        <a href="#tentang">Tentang</a>
-        <a href="#skill">Skill</a>
-        <a href="#bukti-belajar">Bukti Belajar</a>
-      </nav>
-    </div>
-  </header>
+    <h1>Tabel Perkalian 9</h1>
+  <Ii>Nim: 262302006</Ii>
+  <Ii>Nama: Fitri Helviana</Ii>
 
-  <main>
-    <!-- ================= BERANDA ================= -->
-    <section id="beranda" class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">// halo, dunia</p>
-        <h1>Saya <span class="grad">Nama Lengkap Kamu</span></h1>
-        <p class="lead">Mahasiswa Fakultas Komputer yang sedang belajar logika algoritma dan pemrograman web.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="#bukti-belajar">Lihat Bukti Belajar</a>
-          <a class="btn btn-ghost" href="#tentang">Tentang Saya</a>
-        </div>
-        <pre class="code-card" aria-hidden="true"><code><span class="c-k">const</span> saya = {
-  nama: <span class="c-s">"Nama Lengkap Kamu"</span>,
-  nim: <span class="c-s">"123456"</span>,
-  prodi: <span class="c-s">"KA-R-1"</span>,
-  belajar: [<span class="c-s">"HTML"</span>, <span class="c-s">"CSS"</span>, <span class="c-s">"JavaScript"</span>]
-};</code></pre>
-      </div>
-    </section>
+    <div id="hasil"></div>
 
-    <!-- ================= TENTANG ================= -->
-    <section id="tentang" class="section">
-      <div class="container">
-        <h2 class="section-title">Tentang Saya</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h3>Biodata</h3>
-            <ul class="bio">
-              <li><span>Nama</span> Nama Lengkap Kamu</li>
-              <li><span>NIM</span> 123456</li>
-              <li><span>Program Studi</span> KA-R-1</li>
-              <li><span>Fakultas</span> Komputer</li>
-              <li><span>Email</span> email@contoh.com</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Ringkasan</h3>
-            <p>Tulis perkenalan singkat tentang dirimu di sini: latar belakang, minat, dan tujuan belajar pemrograman. Ganti seluruh teks contoh pada halaman ini dengan datamu sendiri.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <script>
+        let angka = 9;
+        let output = "";
 
-    <!-- ================= SKILL ================= -->
-    <section id="skill" class="section alt">
-      <div class="container">
-        <h2 class="section-title">Skill</h2>
-        <div class="chips">
-          <span class="chip">HTML5</span>
-          <span class="chip">CSS3</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">Logika Algoritma</span>
-          <span class="chip">Responsive Design</span>
-          <span class="chip">Git &amp; Deployment</span>
-        </div>
-      </div>
-    </section>
+        for (let i = 1; i <= 10; i++) {
+            let hasil = angka * i;
+            output += angka + " x " + i + " = " + hasil + "<br>";
+        }
 
-    <!-- ================= BUKTI BELAJAR ================= -->
-    <section id="bukti-belajar" class="section">
-      <div class="container">
-        <h2 class="section-title">Bukti Belajar</h2>
-        <p class="section-sub">Perjalanan belajar Logika Algoritma bersama Pa Iin TA 20261</p>
+        document.getElementById("hasil").innerHTML = output;
+    </script>
 
-        <div class="learn-grid">
-          <!-- Penjelasan -->
-          <aside class="card learn-info">
-            <h3>Scientific Calculator <span class="level">Level 4</span></h3>
-            <p>Kalkulator ini dibangun dengan JavaScript murni. Ekspresi dibaca oleh <em>tokenizer</em> lalu dihitung oleh <em>recursive descent parser</em> yang mengikuti prioritas operasi matematika, tanpa <code>eval()</code>.</p>
-            <ul class="feature-list">
-              <li>Aritmatika dasar + − × ÷ dengan prioritas operator</li>
-              <li>Pangkat <code>^</code> dan modulo <code>%</code></li>
-              <li>sin, cos, tan (Degree / Radian)</li>
-              <li>√, x², log, ln, π, e, kurung, faktorial</li>
-              <li>Validasi input dan pesan error yang jelas</li>
-            </ul>
-            <p class="hint"><strong>Keyboard:</strong> angka &amp; operator, <kbd>Enter</kbd> =, <kbd>Backspace</kbd> hapus, <kbd>Esc</kbd> AC, <kbd>s</kbd> <kbd>c</kbd> <kbd>t</kbd> sin/cos/tan, <kbd>l</kbd> log, <kbd>n</kbd> ln, <kbd>r</kbd> √, <kbd>p</kbd> π, <kbd>e</kbd> e.</p>
-          </aside>
-
-          <!-- Kalkulator -->
-          <div class="calc" id="calc" aria-label="Scientific Calculator">
-            <div class="calc-display">
-              <div class="calc-meta">
-                <span class="badge" id="modeBadge">DEG</span>
-                <span class="expr-line" id="exprLine"></span>
-              </div>
-              <div class="main-line" id="mainLine" aria-live="polite">0</div>
-              <div class="error-line" id="errorLine" role="alert"></div>
-            </div>
-
-            <div class="keys">
-              <!-- Baris 1 -->
-              <button class="key key-mode" data-action="mode" id="modeBtn">Deg</button>
-              <button class="key key-fn" data-action="fn" data-value="sin">sin</button>
-              <button class="key key-fn" data-action="fn" data-value="cos">cos</button>
-              <button class="key key-fn" data-action="fn" data-value="tan">tan</button>
-              <button class="key key-clear" data-action="back" aria-label="Hapus karakter terakhir">⌫</button>
-
-              <!-- Baris 2 -->
-              <button class="key key-fn" data-action="const" data-value="π">π</button>
-              <button class="key key-fn" data-action="const" data-value="e">e</button>
-              <button class="key key-fn" data-action="fn" data-value="log">log</button>
-              <button class="key key-fn" data-action="fn" data-value="ln">ln</button>
-              <button class="key key-clear" data-action="clear">AC</button>
-
-              <!-- Baris 3 -->
-              <button class="key key-fn" data-action="square">x²</button>
-              <button class="key key-fn" data-action="fn" data-value="√">√</button>
-              <button class="key key-fn" data-action="op" data-value="^">^</button>
-              <button class="key key-fn" data-action="fact">!</button>
-              <button class="key key-op" data-action="op" data-value="÷">÷</button>
-
-              <!-- Baris 4 -->
-              <button class="key key-fn" data-action="open">(</button>
-              <button class="key key-num" data-action="digit" data-value="7">7</button>
-              <button class="key key-num" data-action="digit" data-value="8">8</button>
-              <button class="key key-num" data-action="digit" data-value="9">9</button>
-              <button class="key key-op" data-action="op" data-value="×">×</button>
-
-              <!-- Baris 5 -->
-              <button class="key key-fn" data-action="close">)</button>
-              <button class="key key-num" data-action="digit" data-value="4">4</button>
-              <button class="key key-num" data-action="digit" data-value="5">5</button>
-              <button class="key key-num" data-action="digit" data-value="6">6</button>
-              <button class="key key-op" data-action="op" data-value="-">−</button>
-
-              <!-- Baris 6 -->
-              <button class="key key-fn" data-action="op" data-value="%">%</button>
-              <button class="key key-num" data-action="digit" data-value="1">1</button>
-              <button class="key key-num" data-action="digit" data-value="2">2</button>
-              <button class="key key-num" data-action="digit" data-value="3">3</button>
-              <button class="key key-op" data-action="op" data-value="+">+</button>
-
-              <!-- Baris 7 -->
-              <button class="key key-num key-wide" data-action="digit" data-value="0">0</button>
-              <button class="key key-num" data-action="dot">.</button>
-              <button class="key key-eq key-wide" data-action="equals">=</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="year">2026</span> Nama Lengkap Kamu &middot; Dibuat dengan HTML, CSS &amp; JavaScript</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
